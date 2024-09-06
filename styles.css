@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* This will center the flex items horizontally */
+  align-items: start; /* Align items at the start of the flex container vertically */
+  flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+  gap: 20px; /* Adds space between the flex items */
+  max-width: 1200px; /* Maximum width of the container */
+  margin: auto; /* Centers the entire container horizontally */
+}
+
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Each calculator will take up equal space */
+  min-width: 500px; /* Minimum width to avoid too much squeezing */
+  max-width: 600px; /* Maximum width to avoid too much stretching */
+}
+
+.calculator h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 5px; /* Adds a little space at the top of each button */
+  margin-bottom: 5px; /* Adds a little space at the bottom of each button */
+}
+
+.form-group button:hover {
+  background-color: #218838;
+}
+
+.result {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#footingContainer {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+#footingHeadings,
+#footingScheduleHeadings {
+  display: flex;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.footing-heading {
+  flex: 1;
+  text-align: center;
+  background-color: transparent; /* Make the button's background transparent */
+  border: none; /* Remove borders */
+  font-weight: bold; /* Keep text bold */
+  cursor: pointer; /* Cursor as pointer to indicate it's clickable */
+  padding: 10px; /* Padding for better appearance */
+  outline: none; /* Remove focus outline */
+  position: relative; /* Needed for the positioning of the tooltip */
+}
+
+.footing-heading:hover {
+  background-color: #e9ecef; /* Slight background color on hover for better user feedback */
+}
+
+.footing-heading::after {
+  content: "Click to sort"; /* Tooltip text */
+  visibility: hidden; /* Hide tooltip by default */
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position the tooltip above the button */
+  left: 50%;
+  margin-left: -60px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.footing-heading:hover::after {
+  visibility: visible; /* Show tooltip on hover */
+  opacity: 1;
+}
+
+#footingList,
+#footingSchedule {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footingList li,
+#footingSchedule li {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* #footingList  */
+.footing-item {
+  flex: 1;
+  text-align: center;
+}
+
+#footingList .footing-item:last-child {
+  flex: 1;
+  text-align: center;
+}

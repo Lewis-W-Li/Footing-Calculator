@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footing Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator left-panel">
+        <h2>Footing Calculator</h2>
+        <div class="form-group">
+          <label for="Footing_Name">Footing Name:</label>
+          <input
+            type="text"
+            id="Footing_Name"
+            placeholder="Footing Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="soil_resistance_psf">Soil Resistance (psf):</label>
+          <input
+            type="number"
+            id="soil_resistance_psf"
+            placeholder="Soil Resistance (psf)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="Compression_lbs">Compression (lbs):</label>
+          <input
+            type="number"
+            id="Compression_lbs"
+            placeholder="Compression (lbs)"
+            required
+          />
+        </div>
+        <div class="result" id="result"></div>
+        <div class="form-group">
+          <button onclick="calculateFootingSize()">
+            Calculate Footing Size
+          </button>
+          <button onclick="addFooting()">Add Footing</button>
+          <button onclick="printFootings()">Print Footing List</button>
+          <button onclick="clearAllFootings()">Clear All</button>
+          <button onclick="saveData(entered_footings, 'footing_list.json')">
+            Save Footing List to JSON
+          </button>
+          <button onclick="loadData('footing_list.json', loadFootingList)">
+            Load Footing List to JSON
+          </button>
+        </div>
+        <div id="footingContainer">
+          <div id="footingHeadings">
+            <button class="footing-heading" onclick="sortFootings('name')">
+              Footing Name
+            </button>
+            <button class="footing-heading" onclick="sortFootings('size')">
+              Min Size (sqft)
+            </button>
+            <button class="footing-heading" onclick="sortFootings('type')">
+              Type
+            </button>
+            <button
+              class="footing-heading"
+              onclick="sortFootings('soil_resistance')"
+            >
+              Soil Resistance (psf)
+            </button>
+            <button
+              class="footing-heading"
+              onclick="sortFootings('compression')"
+            >
+              Compression (lbs)
+            </button>
+            <button class="footing-heading">Action</button>
+          </div>
+          <ul id="footingList"></ul>
+        </div>
+      </div>
+      <div class="calculator right-panel">
+        <h3>Custom Footing Schedule</h3>
+        <div class="form-group">
+          <label for="schedule_footing_name">Footing Name:</label>
+          <input
+            type="text"
+            id="schedule_footing_name"
+            placeholder="Enter name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="schedule_footing_width">Width (ft):</label>
+          <input
+            type="number"
+            id="schedule_footing_width"
+            placeholder="Width in feet"
+          />
+        </div>
+        <div class="form-group">
+          <label for="schedule_footing_length">Length (ft):</label>
+          <input
+            type="number"
+            id="schedule_footing_length"
+            placeholder="Length in feet"
+          />
+        </div>
+        <div class="form-group">
+          <button onclick="addScheduleFooting()">Add Footing to Schedule</button>
+          <button onclick="saveData(footing_schedule, 'footing_schedule.json')">
+            Save Footing Schedule to JSON
+          </button>
+          <button
+            onclick="loadData('footing_schedule.json', loadFootingSchedule)"
+          >
+            Load Footing Schedule to JSON
+          </button>
+        </div>
+        <div id="footingScheduleHeadings">
+          <button
+            class="footing-heading"
+            onclick="sortFootingSchedule('name_schedule')"
+          >
+            Footing Name
+          </button>
+          <button
+            class="footing-heading"
+            onclick="sortFootingSchedule('width')"
+          >
+            Width (ft)
+          </button>
+          <button
+            class="footing-heading"
+            onclick="sortFootingSchedule('length')"
+          >
+            Length (ft)
+          </button>
+          <button class="footing-heading" onclick="sortFootingSchedule('area')">
+            Area (sqft)
+          </button>
+          <button class="footing-heading">Action</button>
+        </div>
+        <ul id="footingSchedule"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
