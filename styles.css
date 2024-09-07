@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
-  /* padding: 20px; */
+  padding: 20px;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex: 1; /* Each calculator will take up equal space */
   /* min-width: 600px; Minimum width to avoid too much squeezing */
-  max-width: 600px; /* Maximum width to avoid too much stretching */
+  max-width: 500px; /* Maximum width to avoid too much stretching */
 }
 
 .calculator h2 {
@@ -80,7 +80,8 @@ body {
   display: flex;
   background-color: #f8f9fa;
   border-bottom: 1px solid #ddd;
-  padding: 10px;
+  padding: 1px;
+  /* here caused phone width cut off  */
   font-weight: bold;
 }
 
