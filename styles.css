@@ -21,7 +21,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex: 1; /* Each calculator will take up equal space */
-  min-width: 500px; /* Minimum width to avoid too much squeezing */
+  /* min-width: 600px; Minimum width to avoid too much squeezing */
   max-width: 600px; /* Maximum width to avoid too much stretching */
 }
 
