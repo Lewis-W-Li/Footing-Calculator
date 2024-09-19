@@ -1,6 +1,24 @@
 let entered_footings = []; // Array to store footings
 let footing_schedule = []; // Array to store custom footings in a footing_schedule
 
+// New function to load default data
+function loadInitialData() {
+  fetch("default_footing_list.json")
+    .then((response) => response.json())
+    .then((data) => loadFootingList(data))
+    .catch((error) => console.error("Failed to load default footings:", error));
+
+  fetch("default_footing_schedule.json")
+    .then((response) => response.json())
+    .then((data) => loadFootingSchedule(data))
+    .catch((error) =>
+      console.error("Failed to load default footing schedule:", error)
+    );
+}
+
+// Ensure this is called when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", loadInitialData);
+
 //save and load VVVVVV
 function saveData(dataArray, filename) {
   const dataStr = JSON.stringify(dataArray);

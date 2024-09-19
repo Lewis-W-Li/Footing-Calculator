@@ -1,0 +1,9 @@
+[
+  { "name_schedule": "F1", "width": 2.5, "length": 2.5, "area": 6.25 },
+  { "name_schedule": "F2", "width": 3, "length": 3, "area": 9 },
+  { "name_schedule": "F3", "width": 3.5, "length": 3.5, "area": 12.25 },
+  { "name_schedule": "F4", "width": 4, "length": 4, "area": 16 },
+  { "name_schedule": "F5", "width": 4.75, "length": 4.75, "area": 22.5625 },
+  { "name_schedule": "F6", "width": 6, "length": 6, "area": 36 },
+  { "name_schedule": "F7", "width": 4, "length": 4.75, "area": 19 }
+]

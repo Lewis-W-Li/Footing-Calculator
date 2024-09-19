@@ -1,0 +1,30 @@
+[
+  {
+    "name": "B3",
+    "size": "14.18",
+    "type": "F4",
+    "soil_resistance": 2000,
+    "compression": 28361
+  },
+  {
+    "name": "B7",
+    "size": "4.27",
+    "type": "F1",
+    "soil_resistance": 2000,
+    "compression": 8536
+  },
+  {
+    "name": "B8+B7+B13\t",
+    "size": "24.07",
+    "type": "F6",
+    "soil_resistance": 2000,
+    "compression": 48136
+  },
+  {
+    "name": "UFL-B2\t",
+    "size": "10.75",
+    "type": "F3",
+    "soil_resistance": 2000,
+    "compression": 21504
+  }
+]
